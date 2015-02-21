@@ -1,2 +1,1 @@
-# minesweeper
 Simple Minesweeper Implementation

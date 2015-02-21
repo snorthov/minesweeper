@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script type="text/javascript" src="javascript/minesweeper.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/minesweeper.css" />
+</head>
+<body onload="main()">
+	<table id="sweeper" style="text-align: center">
+		<tr>
+			<td>
+				<div id="counter1">
+					<!-- must be on the same line -->
+					<img src="images/0.gif"/><img src="images/0.gif"/><img src="images/0.gif"/>
+				</div>
+			</td>
+			<td>
+				<button id="start" onclick="main()">
+					<img id="button-image" src="images/smile.gif"/>
+				</button>
+			</td>
+			<td>
+				<div id="counter2">
+					<!-- must be on the same line -->
+					<img src="images/0.gif"/><img src="images/0.gif"/><img src="images/0.gif"/>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<div id="board">
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

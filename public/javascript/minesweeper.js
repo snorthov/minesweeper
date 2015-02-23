@@ -19,7 +19,6 @@ var SURPRISE = "images/surprise.gif";
 var HAPPY = "images/happy.gif";
 
 /* Board Variables */
-var DIGIT_COUNT = 3;
 var mineCount, rowCount, columnCount, timer;
 
 function main() {
@@ -30,21 +29,17 @@ function main() {
 }
 
 function setCounter(id, value) {
-	var string = "", count = 0;
-	while (value > 0 && count < DIGIT_COUNT) {
-		var digit = value % 10;
-		string = "<img src='images/"+digit+".gif'/>" + string;
-		value = Math.floor(value/10);
-		count++;
-	}
-	var leading = DIGIT_COUNT - count;
-	while (leading > 0) {
-		string = "<img src='images/0.gif'/>" + string;
-		--leading;
-	}
 	var node = document.getElementById(id);
-	//window.alert(string);
-	if (node) node.innerHTML = string;
+	if (node) {
+		var children = node.getElementsByTagName("IMG");
+		var count = children.length - 1;
+		while (count >= 0) {
+			var digit = value % 10;
+			children[count].src = "images/"+digit+".gif";
+			value = Math.floor(value/10);
+			--count;
+		}
+	}
 }
 
 function getState(i, j) {
@@ -233,7 +228,7 @@ function resetBoard() {
 	setCounter("counter1", mineCount);
 	setButtonState(SMILE);
 	setCounter("counter2", counter);
-	clearInterval(timer);
+	if (timer) clearInterval(timer);
 	timer = setInterval(function() {
 		setCounter("counter2", counter++);
 	}, 1000);

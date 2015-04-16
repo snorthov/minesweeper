@@ -32,7 +32,6 @@ function setCounter(id, value) {
 	var node = document.getElementById(id);
 	if (node) {
 		var children = node.getElementsByTagName("IMG");
-		value = Math.min(value, Math.pow(10, children.length)-1);
 		var count = children.length - 1;
 		while (count >= 0) {
 			var digit = value % 10;

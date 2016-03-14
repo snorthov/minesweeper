@@ -13,10 +13,10 @@ function EMPTY_N(i) {
 }
 
 /* Button States */
-var SMILE = "images/smile.gif";
-var SAD = "images/sad.gif";
-var SURPRISE = "images/surprise.gif";
-var HAPPY = "images/happy.gif";
+var SMILE = "data/smile.gif";
+var SAD = "data/sad.gif";
+var SURPRISE = "data/surprise.gif";
+var HAPPY = "data/happy.gif";
 
 /* Board Variables */
 var mineCount, rowCount, columnCount, timer;
@@ -35,7 +35,7 @@ function setCounter(id, value) {
 		var count = children.length - 1;
 		while (count >= 0) {
 			var digit = value % 10;
-			children[count].src = "images/"+digit+".gif";
+			children[count].src = "data/"+digit+".gif";
 			value = Math.floor(value/10);
 			--count;
 		}

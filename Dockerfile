@@ -16,4 +16,4 @@ RUN npm install
 RUN ls /home/${APP_NAME}
 
 # //TODO - use npm instead
-CMD node server.js
+CMD node app.js

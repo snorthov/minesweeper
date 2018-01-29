@@ -8,5 +8,7 @@
 	"engines": {
 		"node": "0.10.*"
 	},
-	"repository": {}
+	"scripts": {
+		"start": "node server.js"
+	}
 }

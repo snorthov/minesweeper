@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "A Simple Minesweeper Implementation",
 	"dependencies": {
-		"express": "3.4.7"
+		"express": "4.17.1"
 	},
 	"engines": {
 		"node": "0.10.*"

@@ -6,6 +6,62 @@
 	background-image: url("../data/square.jpg");
 }
 
+.smile {
+    content: url("../data/smile.gif");
+}
+
+.sad {
+    content: url("../data/sad.gif");
+}
+
+.surprise {
+    content: url("../data/surprise.gif");
+}
+
+.happy {
+    content: url("../data/happy.gif");
+}
+
+.counter0 {
+    content: url("../data/0.gif");
+}
+
+.counter1 {
+    content: url("../data/1.gif");
+}
+
+.counter2 {
+    content: url("../data/2.gif");
+}
+
+.counter3 {
+    content: url("../data/3.gif");
+}
+
+.counter4 {
+    content: url("../data/4.gif");
+}
+
+.counter5 {
+    content: url("../data/5.gif");
+}
+
+.counter6 {
+    content: url("../data/6.gif");
+}
+
+.counter7 {
+    content: url("../data/7.gif");
+}
+
+.counter8 {
+    content: url("../data/8.gif");
+}
+
+.counter9 {
+    content: url("../data/9.gif");
+}
+
 .empty {
 	background-image: url("../data/empty.jpg");
 }

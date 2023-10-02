@@ -13,10 +13,10 @@ function EMPTY_N(i) {
 }
 
 /* Button States */
-var SMILE = "data/smile.gif";
-var SAD = "data/sad.gif";
-var SURPRISE = "data/surprise.gif";
-var HAPPY = "data/happy.gif";
+var SMILE = "smile";
+var SAD = "sad";
+var SURPRISE = "surprise";
+var HAPPY = "happy";
 
 /* Board Variables */
 var mineCount, rowCount, columnCount, timer;
@@ -35,11 +35,15 @@ function setCounter(id, value) {
 		var count = children.length - 1;
 		while (count >= 0) {
 			var digit = value % 10;
-			children[count].src = "data/"+digit+".gif";
+			children[count].className = "counter" + digit;
 			value = Math.floor(value/10);
 			--count;
 		}
 	}
+}
+
+function getSquare(i, j) {
+	return document.getElementById("square-" + i + "-" + j);
 }
 
 function getState(i, j) {
@@ -54,11 +58,7 @@ function setState(i, j, state) {
 
 function setButtonState(state) {
 	var image = document.getElementById("button-image");
-	if (image) image.src = state;
-}
-
-function getSquare(i, j) {
-	return document.getElementById("square-" + i + "-" + j);
+	if (image) image.className = state;
 }
 
 function mouseDown(event, i, j) {

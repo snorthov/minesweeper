@@ -2,36 +2,8 @@
 <head>
 	<title>Minesweeper</title>
 	<link rel="icon" href="public/data/mine.gif">
-	<script type="text/javascript" src="public/js/minesweeper.js"></script>
-	<link rel="stylesheet" type="text/css" href="public/css/minesweeper.css" />
 </head>
-<body onload="main()">
-	<table id="sweeper" style="text-align: center">
-		<tr>
-			<td>
-				<div id="counter1">
-					<!-- must be on the same line -->
-					<img class="counter0"/><img class="counter0"/><img class="counter0"/>
-				</div>
-			</td>
-			<td>
-				<button id="start" onclick="main()">
-					<img id="button-image" class="smile"/>
-				</button>
-			</td>
-			<td>
-				<div id="counter2">
-					<!-- must be on the same line -->
-					<img class="counter0"/><img class="counter0"/><img class="counter0"/>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3">
-				<div id="board">
-				</div>
-			</td>
-		</tr>
-	</table>
+<body>
+	<iframe src="public/index.html" iframetag scrolling="no" width="205" height="240" frameborder="0"></iframe>
 </body>
 </html>

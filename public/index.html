@@ -2,6 +2,17 @@
 <head>
 	<title>Minesweeper</title>
 	<link rel="icon" href="data/mine.gif">
+	<!-- preload the counter digits to aviod flashing -->
+	<link rel="preload" as="image" href="data/0.gif">
+	<link rel="preload" as="image" href="data/1.gif">
+	<link rel="preload" as="image" href="data/2.gif">
+	<link rel="preload" as="image" href="data/3.gif">
+	<link rel="preload" as="image" href="data/4.gif">
+	<link rel="preload" as="image" href="data/5.gif">
+	<link rel="preload" as="image" href="data/6.gif">
+	<link rel="preload" as="image" href="data/7.gif">
+	<link rel="preload" as="image" href="data/8.gif">
+	<link rel="preload" as="image" href="data/9.gif">
 	<script type="text/javascript" src="js/minesweeper.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/minesweeper.css">
 </head>
@@ -28,8 +39,7 @@
 		</tr>
 		<tr>
 			<td colspan="3">
-				<div id="board">
-				</div>
+				<div id="board"></div>
 			</td>
 		</tr>
 	</table>

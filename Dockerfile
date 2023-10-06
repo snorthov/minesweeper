@@ -3,8 +3,8 @@ FROM mhart/alpine-node:6.9.2
 
 # Configure the app
 ARG APP_NAME=minesweeper
-EXPOSE 5000
-ENV PORT 5000
+EXPOSE 4000
+ENV PORT 4000
 
 # Set up the application directory
 RUN mkdir -p /home/${APP_NAME}

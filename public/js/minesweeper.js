@@ -22,7 +22,7 @@ var HAPPY = "happy";
 var mineCount, rowCount, columnCount, timer;
 
 function main() {
-	mineCount = 0;
+	mineCount = 8;
 	rowCount = 8;
 	columnCount = 8;
 	resetBoard();
@@ -215,13 +215,14 @@ function resetBoard() {
 	}
 	string += "</table>\n";
 	node.innerHTML = string;
-	while (mineCount < rowCount + columnCount) {
+	var counter = 0;
+	while (counter < mineCount) {
 		var i = Math.floor(Math.random() * rowCount);
 		var j = Math.floor(Math.random() * columnCount);
 		var node = getSquare(i, j);
 		if (node && !node.mine) {
 			node.mine = true;
-			mineCount++;
+			counter++;
 		}
 	}
 	var counter = 0;

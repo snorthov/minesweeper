@@ -152,8 +152,9 @@ function checkWin() {
 		}
 	}
 	if (rowCount * columnCount - selectCount === mineCount) {
-		revealAll();
 		setButtonState(HAPPY);
+		revealAll();
+		updateMineCount();
 		clearInterval(timer);
 	} else {
 		setButtonState(SMILE);
@@ -237,13 +238,16 @@ function resetBoard() {
 		for (var j=0; j<columnCount; j++) {
 			var away = 0;
 			var node = getSquare(i, j);
-			if (node && !node.mine) {
-				for (var k=-1; k<2; k++) {
-					for (var l=-1; l<2; l++) {
-						var n = getSquare(i + k, j + l);
-						if (n && n.mine) away++;
+			if (node) {
+				if (!node.mine) {
+					for (var k=-1; k<2; k++) {
+						for (var l=-1; l<2; l++) {
+							var n = getSquare(i + k, j + l);
+							if (n && n.mine) away++;
+						}
 					}
 				}
+				node.selected = false;
 				node.away = away;
 			}
 		}

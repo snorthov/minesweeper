@@ -140,7 +140,7 @@ function updateMineCount() {
 			if (state === FLAG) flagCount++;
 		}
 	}
-	setCounter("counter1", mineCount - flagCount);
+	setCounter("counter1", Max(0, mineCount - flagCount));
 }
 
 function checkWin() {
